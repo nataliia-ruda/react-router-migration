@@ -8,16 +8,19 @@ import { tabs } from './data';
 import { highlightKotlin } from './highlight';
 
 import 'highlight.js/styles/github.css';
-import styles from './ProgrammingLanguage.module.scss'
+import styles from './ProgrammingLanguage.module.scss' 
+import { useEffect } from 'react';
 
 
 const highlightedTabs = tabs.map(tab => highlightKotlin(tab.code));
 
-const initialIndex = Math.floor(Math.random() * tabs.length);
-
 export function ProgrammingLanguage() {
     const textCn = useTextStyles();
-    const [activeIndex, setActiveIndex] = useState(initialIndex);
+    const [activeIndex, setActiveIndex] = useState(0); 
+
+    useEffect(() => {
+        setActiveIndex(Math.floor(Math.random() * tabs.length));
+    }, []);
 
     return (
         <div className="kto-grid kto-grid-gap-32 kto-offset-top-96 kto-offset-top-md-48">

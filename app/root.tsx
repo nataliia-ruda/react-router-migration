@@ -24,15 +24,17 @@ export default function Root() {
         <Meta />
         <Links />
       </head>
-      <body className="page_js_no page__index-new">
-        <Header/>
+      <body className="page__index-new" suppressHydrationWarning>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.body.className += ' page_js_yes'`,
+          }}
+        />
+        <Header />
         <Outlet />
-        <Footer/>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
-        <script dangerouslySetInnerHTML={{
-          __html: `document.body.className = document.body.className.replace('page_js_no', 'page_js_yes')`
-        }} />
       </body>
     </html>
   );
