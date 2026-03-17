@@ -1,0 +1,50 @@
+.headerSection {
+  background-color: #27282c;
+  padding-top: 96px;
+}
+
+.actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+}
+
+.whyBtn {
+  margin-left: 16px;
+}
+
+.getStartedBtn:hover{
+  color: white;
+}
+
+.whyBtn:hover{
+  color: white;
+}
+
+.contributors {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grid {
+  margin-top: 48px;
+}
+
+.cardDesktopOnly {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+:global(:root) {
+  --rs-color-primary-dark-theme: #4ca6ff;
+  --rs-color-primary-dim-dark-theme: #3d8fe0;
+  --rs-color-primary-fog-dark-theme: rgba(76, 166, 255, 0.2);
+  --rs-color-primary-t-dim-dark-theme: rgba(76, 166, 255, 0.8);
+  --rs-color-primary-t-dim-light-theme: rgba(76, 166, 255, 0.8);
+}
