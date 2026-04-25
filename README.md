@@ -1,6 +1,6 @@
 # Kotlin Homepage - React Router 7 SSR Migration
 
-This project is a migration of a legacy React application (Kotlin website homepage) to React Router 7 Framework Mode with Server-Side Rendering (SSR).
+This project involves migrating a legacy Kotlin website homepage to a modern React application powered by React Router 7 Framework Mode with Server-Side Rendering (SSR).
 
 The goal was to modernize the architecture while preserving the original design and interactive behavior.
 
